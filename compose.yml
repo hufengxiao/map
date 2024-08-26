@@ -1,0 +1,13 @@
+services:
+    map:
+        build: .
+        image: map
+        ports:
+            - 8000:8000
+
+networks:
+    map-net:
+        name: map-net
+        ipam:
+            config:
+                -   subnet: 172.16.238.0/24
